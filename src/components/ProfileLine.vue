@@ -15,7 +15,7 @@
 </template>
 
 <script setup lang="ts">
-import {StatusRole} from '../models/cv'
+import {StatusRole} from '../models/resume'
 import ProfileLineSub from './ProfileLineSub.vue'
 
 defineProps<{ item: StatusRole }>()

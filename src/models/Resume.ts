@@ -10,7 +10,7 @@
    Title?: string
 }
 
-export interface CvDocument
+export interface Resume
 {
    Personal?: Personal
    Education?: Education
@@ -19,6 +19,23 @@ export interface CvDocument
    Tools?: Label[]
    Story?: string[]
    Statuses?: Status[]
+   Experiences?: Experience[]
+   Projects?: Project[]
+}
+
+export interface Project
+{
+   Name: string
+   Summary: string
+   Type?: string[]
+   Status?: string[]
+   Roles?: string[]
+   Skills?: string[]
+   Tools?: string[]
+   Tasks?: string[]
+   Challenges?: string[]
+   Domains?: string[]
+   Modules?: string[]
 }
 
 export interface Label
@@ -35,6 +52,13 @@ export interface Education
    Department?: string
    Degree?: string
    Description?: string
+}
+
+export interface Experience
+{
+   Period: string
+   Details: string[]
+   Company: string
 }
 
 export interface Status

@@ -40,7 +40,7 @@
 
 <script setup lang="ts">
 
-import {Personal} from '../models/cv'
+import {Personal} from '../models/resume'
 
 const props = defineProps<{ personal: Personal }>()
 

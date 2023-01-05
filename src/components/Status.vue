@@ -1,7 +1,7 @@
 ﻿<template>
   <div class="o-profile">
     <div class="o-profile-title">
-      status
+      experience highlights
     </div>
     <div class="o-profile-status" v-for="status in statuses">
       <div class="o-profile-status-title">
@@ -19,7 +19,7 @@
 
 <script setup lang="ts">
 
-import {Status} from '../models/cv'
+import {Status} from '../models/resume'
 import ProfileLine from './ProfileLine.vue'
 
 defineProps<{ statuses?: Status[] }>()

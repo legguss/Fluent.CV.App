@@ -3,37 +3,37 @@ $mainColor: #625a3e
 $editorBorder: #ffd800
 $bulletColor: #ffe555
 $experienceHeader: #81a42a
+i
+  padding-bottom: 0
 
+body
+  background-color: #fff
 
-resume
+.of-row
+  display: flex
+  flex-direction: row
+  justify-content: flex-start
+
+.of-column
+  display: flex
+  flex-direction: column
+  align-content: flex-start
+
+.o-resume
   background: $mainBackground
   color: $mainColor
   display: block
   position: relative
 
-
-i
-
-  padding-bottom: 0
-
-
-body
-
-  background-color: #fff
-
-resume *
+.o-resume *
   background-color: transparent
   color: $mainColor
 
-
-resume-section
-
+.o-project-section
   margin-bottom: 8px
   display: block
 
-
-resume .o-title
-
+.o-resume .o-title
   margin-top: 4px
   margin-bottom: 4px
   font-size: 110%
@@ -41,20 +41,24 @@ resume .o-title
   color: #ff851e
   text-transform: uppercase
 
-
-resume .o-description, resume .o-description pre
-
+.o-resume .o-description, o-resume .o-description pre
   color: #000000
   padding: 6px
 
+.o-labels
+  margin-top: 2px
 
-resume .o-label
-
+.o-label
+  margin-right: 2px
+  display: flex
+  align-items: center
+  text-transform: uppercase
+  border-radius: 4px
+  font-family: "Oswald", sans-serif
   background-color: #fbf8be
   color: #514b35
   border: 1px solid #e4e1aa
-  padding-top: 1px
-  padding-bottom: 1px
+  padding: 1px 6px
   margin-left: 3px
   margin-bottom: 2px
   white-space: nowrap
@@ -62,78 +66,59 @@ resume .o-label
   font-weight: 500
 
 .o-short-description
-
   margin-left: 8px
   flex-direction: column
   display: flex
   align-content: center
-
   line-height: 160%
   text-transform: none
 
-
 .o-next-page
-
   display: block
   page-break-after: always
   page-break-inside: auto
 
 .o-resume-image
-
   width: 66%
   align-self: center
 
 .o-resume-image img
-
   width: 100%
 
 .o-label-table
-
   display: table
 
 .o-label-row
   display: table-row
 
 .o-labels-caption
-
   display: table-cell
   font-size: 80%
 
-
 .o-labels-container
-
   display: flex
   flex-direction: row
   flex-wrap: wrap
 
-
 .o-labels-list
-
   display: table-cell
 
 .o-status-labels
-
   display: flex
   flex-flow: row
 
-
 .o-resume-content
-
   display: flex
   flex-flow: column
   background-color: $mainBackground
   justify-content: space-between
 
-
 .o-resume-content-main
-
   display: flex
   flex-flow: row
   background-color: $mainBackground
 
-
 .o-resume-left
-
   display: flex
   flex-flow: column
   flex-grow: 1
@@ -145,7 +130,6 @@ resume .o-label
   padding-right: 8px
 
 .o-resume-right
-
   display: flex
   padding-left: 10px
   flex-flow: column
@@ -155,61 +139,44 @@ resume .o-label
   min-height: 297mm
   height: calc(100%)
 
-
 .o-resume-name
-
   padding-top: 10px
   font-size: 240%
   font-family: "Oswald", sans-serif
   font-weight: bold
   align-self: center
 
-
 .o-current-title
-
   text-transform: uppercase
   font-size: 130%
-
   margin-top: 10px
   margin-bottom: 10px
   align-self: center
 
-
 .o-personal-info
-
   margin-top: 10px
   line-height: 100%
 
 .o-personal-info-table
   display: table
 
-
 .o-personal-info-row
-
   display: table-row
 
-
 .o-personal-info-cell
-
   display: table-cell
 
-
 .o-personal-info-cell.o-caption
-
   text-align: left
   padding-right: 5px
   padding-bottom: 8px
 
-
 .o-profile
-
   margin-top: 10px
   display: flex
   flex-flow: column
 
-
 .o-profile-title
-
   text-transform: uppercase
   font-size: 150%
   font-weight: bold
@@ -217,43 +184,33 @@ resume .o-label
   padding-bottom: 10px
   padding-top: 10px
 
-
 .o-profile-info
-
   font-size: 110%
   line-height: 110%
 
-
 .o-education
-
   margin-top: 10px
   display: flex
   flex-flow: column
 
-
 .o-project-body
-
   margin-left: 10px
   display: flex
   flex-direction: row
 
 .o-project-left
-
   flex-basis: 55%
   max-width: 55%
   flex-grow: 55
   flex-shrink: 55
 
 .o-project-right
-
   flex-basis: 45%
   max-width: 45%
   flex-grow: 45
   flex-shrink: 45
 
-
 .o-education-title
-
   text-transform: uppercase
   font-size: 150%
   font-weight: bold
@@ -261,28 +218,20 @@ resume .o-label
   padding-bottom: 10px
   padding-top: 10px
 
-
 .o-education-info
-
   font-size: 110%
   line-height: 110%
 
-
 .o-experience
-
   margin-right: 5px
 
 .o-experiences-title
-
   padding-top: 10px
   padding-bottom: 0
   font-size: 150%
   color: #625a3e
 
-
 .o-experience-header
-
-
   display: flex
   flex-flow: row
   padding-top: 15px
@@ -292,41 +241,30 @@ resume .o-label
   text-transform: uppercase
 
 .o-experience-begin
-
   margin-right: 3px
 
-
 .o-experience-end
-
   margin-right: 8px
   margin-left: 3px
   min-width: 35px
 
-
 .o-experience-role
-
   padding-left: 10px
   line-height: 120%
   font-size: 95%
 
 .o-resume-page
-
   min-height: 297mm
-
   height: 297mm
   position: relative
 
-
 .o-project-history
-
   background-color: #fff
   //margin-left: -230px
   padding-left: 20px
   padding-top: 5px
 
-
 .o-project-history-title
-
   padding-top: 12px
   padding-bottom: 5px
   font-size: 150%
@@ -334,16 +272,13 @@ resume .o-label
   text-transform: uppercase
 
 .o-experience i, .o-story-line i
-
   color: $bulletColor
   font-size: 80%
 
 .o-skills
-
   margin-top: 5px
 
 .o-skills-header
-
   font-weight: bold
   font-size: 150%
   font-family: Roboto, serif
@@ -352,14 +287,12 @@ resume .o-label
   text-transform: uppercase
 
 .o-skills-body
-
   display: flex
   flex-direction: row
   flex-wrap: wrap
   max-width: calc(100%)
 
 .o-skills .o-skill
-
   text-transform: uppercase
   font-family: "open sans", sans-serif
   font-weight: 700
@@ -371,78 +304,64 @@ resume .o-label
   flex-direction: row
 
 .o-skill-label
-
   background-color: #e4e1aa
   padding: 2px 6px
   border-radius: 6px
   margin-left: 4px
   display: inline-block
 
-
 .o-skill-label.o-top-0
-
   font-weight: bold
   font-size: 95%
 
 .o-skill-label.o-top-1
-
   font-size: 85%
   font-weight: normal
 
 .o-skill-label.o-top-3
-
   font-size: 70%
   font-weight: normal
 
-
 .o-skill-name
   .o-skill-count
-
     width: 24px
     text-align: center
     border-radius: 12px
     padding-top: 3px
-
     display: flex
     justify-content: center
     align-content: center
 
-
 .o-profile-line
-
   font-family: "Roboto", sans-serif
   flex-flow: column
   display: flex
   align-content: center
   font-size: 90%
-  .o-profile-summary
-    display: flex
-    flex-flow: row
-    align-items: center
+
+.o-profile-summary
+  display: flex
+  flex-flow: row
+  align-items: center
 
 .o-profile-status
-
   margin-bottom: 5px
 
 .o-profile-status-title
-
   margin-bottom: 5px
   font-family: "Roboto", sans-serif
   font-weight: bold
   font-size: 95%
   text-transform: uppercase
-  
-.o-profile-line i
 
+.o-profile-line i
   margin-left: 5px
   margin-right: 5px
   font-size: 70%
   padding-top: 5px
   color: #ffd800
 
-
 .o-profile-line-sub
-
   font-family: "Roboto Condensed", sans-serif
   flex-flow: row
   display: flex
@@ -451,9 +370,7 @@ resume .o-label
   padding-top: 3px
   padding-left: 20px
 
-
 .o-profile-line-sub i
-
   margin-left: 5px
   margin-right: 5px
   font-size: 70%
@@ -461,38 +378,29 @@ resume .o-label
   color: $bulletColor
 
 .o-resume-project-header
-
   display: flex
   flex-direction: row
   align-content: center
   margin-bottom: 3px
 
-
 .o-experience-body
-
   display: flex
   flex-flow: column
   justify-content: flex-start
   flex-wrap: wrap
 
-
 .o-experience-line
-
   display: flex
   flex-flow: column
 
-
 .o-project-description-line i
-
   color: gainsboro
   font-size: 80%
 
 .o-indent-1
-
   padding-left: 14px
 
 .o-story-line
-
   padding-left: 15px
   font-family: 'Roboto', sans-serif
   display: flex
@@ -500,19 +408,14 @@ resume .o-label
   font-size: 90%
 
 .o-story-line i
-
   margin-top: 5px
   padding-right: 5px
 
-
 .o-education-info
-
   font-size: 95%
 
 .o-page-break
-
   page-break-after: always
-
 
 .o-stamp
   content: "director's resume generator v0.2"
@@ -526,33 +429,24 @@ resume .o-label
   display: block
   padding-right: 10px
   text-align: right
-
   justify-content: flex-end
 
 .o-statuses
-
   display: flex
   flex-flow: row
 
 .o-statuses .o-label
-
   padding-top: 2px
 
-
 @media print
-
   .o-page-break
-
     page-break-after: always
     break-after: auto
     page-break-before: always
     float: none
 
     .o-menu
-
       display: none
 
-
     body
-
       background-color: white !important

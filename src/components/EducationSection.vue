@@ -23,7 +23,7 @@
 
 <script setup lang="ts">
 
-import {Education} from '../models/cv'
+import {Education} from '../models/resume'
 
 defineProps<{ education?: Education }>()
 

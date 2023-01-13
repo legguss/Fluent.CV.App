@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import {onBeforeMount, ref} from 'vue'
+import {useRoute, useRouter} from 'vue-router'
 import EducationSection from './EducationSection.vue'
 import Experience from './Experience.vue'
 import PersonalInfo from './PersonalInfo.vue'
@@ -10,10 +11,13 @@ import Status from './Status.vue'
 import {Resume} from '../models/Resume'
 
 const cv = ref<Resume>({})
+useRouter()
+const route = useRoute()
 
 onBeforeMount(async () =>
 {
-  const response = await fetch('api/attila')
+  console.log(JSON.stringify(route.params))
+  const response = await fetch(`api/cv/${route.params.id}`)
   cv.value = await response.json()
 })
 

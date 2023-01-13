@@ -23,7 +23,7 @@
 
 <script setup lang="ts">
 
-import {Experience} from '../models/resume'
+import {Experience} from '../models/Resume'
 
 defineProps<{ experiences?: Experience[] }>()
 

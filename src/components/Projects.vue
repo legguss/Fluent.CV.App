@@ -13,7 +13,7 @@
 
 <script setup lang="ts">
 
-import {Project} from '../models/resume'
+import {Project} from '../models/Resume'
 import ProjectSection from './ProjectSection.vue'
 
 defineProps<{ projects?: Project[] }>()

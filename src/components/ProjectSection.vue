@@ -92,7 +92,7 @@
 </template>
 
 <script setup lang="ts">
-import {Project} from '../models/resume'
+import {Project} from '../models/Resume'
 
 defineProps<{ project: Project }>()
 

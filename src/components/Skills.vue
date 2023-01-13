@@ -13,7 +13,7 @@
 </template>
 
 <script setup lang="ts">
-import {Label} from '../models/resume'
+import {Label} from '../models/Resume'
 
 defineProps<{ roles?: Label[], header: string }>()
 

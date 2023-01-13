@@ -19,7 +19,7 @@
 
 <script setup lang="ts">
 
-import {Status} from '../models/resume'
+import {Status} from '../models/Resume'
 import ProfileLine from './ProfileLine.vue'
 
 defineProps<{ statuses?: Status[] }>()

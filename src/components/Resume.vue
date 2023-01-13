@@ -7,7 +7,7 @@ import Projects from './Projects.vue'
 import Skills from './Skills.vue'
 import Stories from './Stories.vue'
 import Status from './Status.vue'
-import {Resume} from '../models/resume'
+import {Resume} from '../models/Resume'
 
 const cv = ref<Resume>({})
 

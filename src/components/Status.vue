@@ -1,10 +1,10 @@
 ﻿<template>
   <div class="o-profile">
-    <div class="o-profile-title">
+    <!--div class="o-profile-title">
       experience highlights
-    </div>
+    </div-->
     <div class="o-profile-status" v-for="status in statuses">
-      <div class="o-profile-status-title">
+      <div class="o-profile-title">
         {{ status.Title }}
       </div>
       <div class="o-profile-info" v-for="item in status.Items">

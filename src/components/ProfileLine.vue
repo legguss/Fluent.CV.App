@@ -2,10 +2,10 @@
 
     <div class="o-profile-line">
       <div class="o-profile-summary">
-        <i class="fas fa-circle"></i>
+        <i class="fas fa-circle" v-if="!item.JustSummary"></i>
         <div>{{ item.Summary }}</div>  
       </div>
-      <template v-for="line in item.Details">
+      <template v-for="line in item.Details" v-if="!item.JustSummary">
         <ProfileLineSub :line="line">
         </ProfileLineSub>
       </template>

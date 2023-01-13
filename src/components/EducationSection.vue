@@ -3,17 +3,18 @@
     <div class="o-education-title">
       education
     </div>
-    <div class="o-education-info">
-      <div>
+
+    <div class="o-education-info" v-for="education in educations">
+      <div class="o-education-when">
         <strong>{{ education?.When }}</strong>
       </div>
-      <div>
+      <div class="o-education-degree">
         <strong>{{ education?.Degree }}</strong>
       </div>
-      <div>
+      <div class="o-education-school">
         {{ education?.School }}
       </div>
-      <div>
+      <div class="o-education-department">
         {{ education?.Department }}
       </div>
     </div>
@@ -25,7 +26,7 @@
 
 import {Education} from '../models/Resume'
 
-defineProps<{ education?: Education }>()
+defineProps<{ educations?: Education[] }>()
 
 </script>
 

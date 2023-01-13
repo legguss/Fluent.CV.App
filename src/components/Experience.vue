@@ -1,10 +1,10 @@
 ﻿<template>
-  <div class="o-experience">
+  <div class="o-experience" v-if="experiences">
     <div class="o-experiences-title">
-      WORK EXPERIENCE
+      {{experiences?.Title}}
     </div>
     <div class="o-experience-body">
-      <div v-for="experience in experiences" class="o-experience-line">
+      <div v-for="experience in experiences?.Items" class="o-experience-line">
         <div class="o-experience-header">
           <div class="o-experience-begin"> {{ experience.Period }}</div>
           <div>{{ experience.Company }}</div>
@@ -23,9 +23,9 @@
 
 <script setup lang="ts">
 
-import {Experience} from '../models/Resume'
+import {Experiences} from '../models/Resume'
 
-defineProps<{ experiences?: Experience[] }>()
+defineProps<{ experiences?: Experiences }>()
 
 </script>
 

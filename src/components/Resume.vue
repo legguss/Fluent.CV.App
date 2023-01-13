@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import {onBeforeMount, ref} from 'vue'
 import {useRoute, useRouter} from 'vue-router'
+import Certificates from './Certificates.vue'
 import EducationSection from './EducationSection.vue'
 import Experience from './Experience.vue'
 import PersonalInfo from './PersonalInfo.vue'
 import Projects from './Projects.vue'
 import Skills from './Skills.vue'
-import Stories from './Stories.vue'
+import Story from './Story.vue'
 import Status from './Status.vue'
 import {Resume} from '../models/Resume'
 
@@ -24,7 +25,7 @@ onBeforeMount(async () =>
 </script>
 
 <template>
-  <div class="o-resume">
+  <div class="o-resume" :class="cv.Styles?.Id">
 
     <div class="o-resume-page o-resume-content" v-if="cv.Personal">
       <div class="o-resume-content-main">
@@ -35,7 +36,7 @@ onBeforeMount(async () =>
           <div class="o-resume-name">
             {{ cv.Personal?.FullName }}
           </div>
-          <div class="o-current-title">
+          <div class="o-current-title" v-if="cv.Personal?.Title">
             {{ cv.Personal?.Title }}
           </div>
 
@@ -45,25 +46,27 @@ onBeforeMount(async () =>
           <Skills :roles="cv.Roles" header="ROLES">
           </Skills>
 
-          <Skills :roles="cv.Skills" header="knowledge">
+          <Skills :roles="cv.Skills" header="skills">
           </Skills>
 
           <Skills :roles="cv.Tools" header="tools">
           </Skills>
 
-          <EducationSection :education="cv.Education">
+          <EducationSection :educations="cv.Education">
           </EducationSection>
+          <Certificates :certificates="cv.Certificates">
+          </Certificates>
 
         </div>
         <div class="o-resume-right">
-          <Stories :stories="cv.Story"></Stories>
+          <Story :story="cv.Story"></Story>
           <Status :statuses="cv.Statuses"></Status>
           <Experience :experiences="cv.Experiences"></Experience>
         </div>
       </div>
     </div>
-    <div class="o-resume-page o-resume-content" v-if="cv.Projects">
-      <Projects :projects="cv.Projects"></Projects>
+    <div class="o-resume-page o-resume-content" v-if="cv.VisibleProjects">
+      <Projects :projects="cv.VisibleProjects"></Projects>
     </div>
   </div>
 </template>

@@ -3,7 +3,7 @@
     <div class="o-personal-info-table">
       <div class="o-personal-info-row" v-if="personal?.Phone">
         <div class="o-personal-info-cell o-caption">
-          Telephone:
+          Phone:
         </div>
         <div class="o-personal-info-cell o-info">
           {{ personal?.Phone }}

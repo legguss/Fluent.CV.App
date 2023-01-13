@@ -9,19 +9,32 @@
    WebSite?: string
    Title?: string
 }
+export interface Story
+{
+   Title?: string
+   Items?: string[]
+   MultiStory?: boolean
+}
+export interface Styles
+{
+   Id: string
+}
 
 export interface Resume
 {
+   Styles?: Styles
    Personal?: Personal
-   Education?: Education
+   Education?: Education[]
+   Certificates?: Education[]
    Roles?: Label[]
    Skills?: Label[]
    Tools?: Label[]
-   Story?: string[]
+   Story?: Story
    Statuses?: Status[]
-   Experiences?: Experience[]
-   Projects?: Project[]
+   Experiences?: Experiences
+   VisibleProjects?: Project[]
 }
+
 
 export interface Project
 {
@@ -54,6 +67,12 @@ export interface Education
    Description?: string
 }
 
+export interface Experiences
+{
+   Title: string
+   Items: Experience[]
+}
+
 export interface Experience
 {
    Period: string
@@ -71,4 +90,5 @@ export interface StatusRole
 {
    Summary: string
    Details: string[]
+   JustSummary: boolean 
 }

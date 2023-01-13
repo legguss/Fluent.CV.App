@@ -4,7 +4,7 @@
       FAVORITE PROJECTS
     </div>
     <template v-for="project in projects">
-      <ProjectSection :project="project">
+      <ProjectSection :project="project" v-if="project.Name">
       </ProjectSection>
     </template>
   </div>

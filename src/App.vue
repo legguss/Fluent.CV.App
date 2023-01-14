@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import Resume from './components/Resume.vue'
 </script>
 
 <template>
-  <Resume/>
+   <router-view></router-view>
 </template>
 
 <style scoped>

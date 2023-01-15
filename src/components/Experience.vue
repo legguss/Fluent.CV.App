@@ -6,12 +6,12 @@
     <div class="o-experience-body">
       <div v-for="experience in experiences?.Items" class="o-experience-line">
         <div class="o-experience-header">
-          <div class="o-experience-begin"> {{ experience.Period }}</div>
-          <div>{{ experience.Company }}</div>
+          <div class="o-experience-period">{{ experience.Period }}</div>
+          <div class="o-experience-company">@ {{ experience.Company }}</div>
         </div>
         <div class="o-experience-roles">
           <div class="o-experience-role" v-for="detail in experience.Details">
-            <i class="fas fa-circle"></i> {{detail}}
+            <span class="o-bullet">◯</span>{{detail}}
           </div>
         </div>
       </div>

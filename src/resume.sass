@@ -1,14 +1,14 @@
 ﻿$mainBackground: #fff
 $mainColor: #625a3e
 $editorBorder: #ffd800
-$bulletColor: #ffe555
+$bulletColor:  #ffe555
 $experienceHeader: #81a42a
 $NarrowFont: 'Roboto Condensed', sans-serif
 $NormalFont: Roboto, sans-serif
-$RightTitleFontSize: 140%
-$LeftTitleFontSize: 140%
+$RightTitleFontSize: 1.4em
+$LeftTitleFontSize: 1.4em
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;500;700&display=swap')
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;500;700&display=swap")
 i
   padding-bottom: 0
 
@@ -27,7 +27,7 @@ html
     margin: 0
     padding: 5mm
     border: 1px solid $mainColor
-    
+    font-size: 11pt
 
 body
   font-weight: 400
@@ -61,7 +61,7 @@ body
 .o-resume .o-title
   margin-top: 4px
   margin-bottom: 4px
-  font-size: 110%
+
   font-weight: bold
   color: #ff851e
   text-transform: uppercase
@@ -209,7 +209,7 @@ body
   padding-top: 10px
 
 .o-profile-info
-  font-size: 94%
+  font-size: 1em 
   
 
   
@@ -274,7 +274,7 @@ body
   margin-right: 0
 
 .o-experiences-title
-  padding-top: 10px
+  padding-top: 8px
   padding-bottom: 0
   font-weight: bold
   text-transform: uppercase
@@ -285,21 +285,30 @@ body
   display: flex
   flex-flow: row
   padding-top: 8px
-  padding-bottom: 7px
-  font-size: 110%
+  padding-bottom: 4px
+  font-family: $NarrowFont
+  font-weight: bold
   color: $experienceHeader
-  text-transform: uppercase
 
-.o-experience-begin
-  margin-right: 0
+.o-experience-period
+  
+    
+.o-experience-company
+  padding-left: 6px
+  
+    
+  
+.o-experience-body
+  display: flex
+  flex-flow: column
+  justify-content: flex-start
+  flex-wrap: wrap
 
-.o-experience-end
-  margin-right: 8px
-  margin-left: 3px
-  min-width: 35px
-
+.o-experience-line
+  display: flex
+  flex-flow: column
+  
 .o-experience-role
-  font-size: 94%
   display: flex
   align-items: start
   padding-bottom: 2px
@@ -325,10 +334,17 @@ body
   font-size: 150%
   color: #625a3e
   text-transform: uppercase
-
+.o-bullet
+  padding-top: 2px
+  padding-right: 3px
+  color: #4f2626
+  font-size: 0.7rem
+  display: flex
+  
+  
 .o-experience i, .o-story-line i
   color: $bulletColor
-  font-size: 80%
+  font-size: 0.8rem
 
 .o-skills
   margin-top: 0
@@ -438,16 +454,6 @@ body
   flex-direction: row
   align-content: center
   margin-bottom: 3px
-
-.o-experience-body
-  display: flex
-  flex-flow: column
-  justify-content: flex-start
-  flex-wrap: wrap
-
-.o-experience-line
-  display: flex
-  flex-flow: column
 
 .o-project-description-line i
   color: gainsboro

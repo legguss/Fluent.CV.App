@@ -9,7 +9,7 @@
 
         <div class="o-story-line" v-for="item in story?.Items">
           <i class="fas fa-circle" v-if="story?.MultiStory"></i>
-          <div>
+          <div class="story-paragraph">
             {{ item }}
           </div>
         </div>

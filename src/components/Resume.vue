@@ -17,9 +17,10 @@ const route = useRoute()
 
 onBeforeMount(async () =>
 {
-  console.log(JSON.stringify(route.params))
+
   const response = await fetch(`api/cv/${route.params.id}`)
   cv.value = await response.json()
+  cv.value.Id = route.params.id
 })
 
 </script>
@@ -30,8 +31,8 @@ onBeforeMount(async () =>
     <div class="o-resume-page o-resume-content" v-if="cv.Personal">
       <div class="o-resume-content-main">
         <div class="o-resume-left">
-          <div class="o-resume-image">
-            <!--img src="../Content/self.jpg" alt="PICS"/-->
+          <div class="o-resume-image" v-if="cv.Styles?.Image">
+            <img src="../assets/attila.jpg" alt="PICS"/>
           </div>
           <div class="o-resume-name">
             {{ cv.Personal?.FullName }}

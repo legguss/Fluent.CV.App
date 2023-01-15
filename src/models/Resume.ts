@@ -18,10 +18,12 @@ export interface Story
 export interface Styles
 {
    Id: string
+   Image: boolean
 }
 
 export interface Resume
 {
+   Id?: string|string[]
    Styles?: Styles
    Personal?: Personal
    Education?: Education[]

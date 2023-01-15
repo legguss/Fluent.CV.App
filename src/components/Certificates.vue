@@ -1,5 +1,5 @@
 ﻿<template>
-  <div class="o-education">
+  <div class="o-education" v-if="certificates">
     <div class="o-education-title">
       other certficates
     </div>

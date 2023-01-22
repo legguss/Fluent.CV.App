@@ -215,12 +215,12 @@ body
   flex-flow: column
 
 .o-profile-title
-  text-transform: uppercase
+  // text-transform: uppercase
   font-size: $RightTitleFontSize
   font-weight: bold
   font-family: $NormalFont
-  padding-bottom: 10px
-  padding-top: 10px
+  padding-bottom: 6px
+  padding-top: 6px
 
 .o-profile-info
   font-size: 1em
@@ -304,6 +304,34 @@ body
   padding-left: 6px
   color: #132a34
 
+.o-experience-role
+  display: flex
+  flex-direction: row
+  line-height: 1rem
+  text-align: justify
+  //justify-content: space-between
+  //align-items: center
+  //align-content: center
+  font-family: $NarrowFont
+  //padding-bottom: 2px
+  .o-wrapper
+    display: inline-flex
+    align-items: center
+
+  .o-bullet
+    display: inline !important
+    padding: 0
+    font-size: 1rem
+    align-items: center
+    color: $TitleColor
+
+  .o-detail
+    display: inline !important
+    white-space: normal
+
+.o-experience-role:last-child
+  padding-bottom: 0
+
 .o-experience-body
   display: flex
   flex-flow: column
@@ -314,23 +342,13 @@ body
   display: flex
   flex-flow: column
 
-.o-experience-role
-  display: flex
-  align-items: start
-  padding-bottom: 2px
-
-  i
-    display: flex
-    padding-top: 4px
-    padding-right: 4px
-
 .o-resume-page
   //min-height: 290mm
   //height: 290mm
   position: relative
 
 .o-project-history
-  padding-left: 20px
+  padding-left: 5px
   padding-top: 5px
 
 .o-project-history-title
@@ -339,13 +357,6 @@ body
   font-size: 150%
   color: #625a3e
   text-transform: uppercase
-
-.o-bullet
-  padding-top: 2px
-  padding-right: 3px
-  color: $TitleColor
-  font-size: 0.7rem
-  display: flex
 
 .o-experience i, .o-story-line i
   color: $bulletColor
@@ -409,10 +420,14 @@ body
   font-size: 70%
   font-weight: normal
 
-.o-profile-line
-  flex-flow: column
+.o-story-item
+  flex-flow: row
   display: flex
   align-content: center
+  padding-bottom: 6px
+
+.o-story-item:last-child
+  padding-bottom: 0
 
 .o-profile-summary
   display: flex
@@ -474,20 +489,6 @@ body
 .o-page-break
   page-break-after: always
 
-.o-stamp
-  content: "director's resume generator v0.2"
-  font-size: 60%
-  position: absolute
-  width: 400px
-  bottom: 10px
-  right: 12px
-  height: 10px
-  line-height: 10px
-  display: block
-  padding-right: 10px
-  text-align: right
-  justify-content: flex-end
-
 .o-statuses
   display: flex
   flex-flow: row
@@ -513,7 +514,7 @@ body
     display: flex
     line-height: 1rem
     text-align: justify
-    justify-content: space-between 
+    //justify-content: space-between
     align-items: center
     align-content: center
     flex-flow: wrap
@@ -522,7 +523,7 @@ body
     .o-token-wrapper
       display: inline-flex
       align-items: center
-      
+
     .o-bullet
       display: inline-flex
       padding: 0 0 0 0
@@ -536,8 +537,11 @@ body
       margin-top: 3px
       align-items: center
 
-    .highlight
+    .verb
       color: $TitleColor
+      font-weight: bold
+
+    .noun
       font-weight: bold
 
     .skill

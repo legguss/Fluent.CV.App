@@ -7,7 +7,6 @@
     <div class='o-story'>
       <template v-for='section in history.Sections'>
         <span class='o-token-wrapper' v-for='(token, index) in section '>
-         
             <span class='o-bullet' v-if='index===0'>●</span>
             <span>&nbsp;</span>
             <span class='o-token' :class='token.Type'>{{ token.Text }}</span>

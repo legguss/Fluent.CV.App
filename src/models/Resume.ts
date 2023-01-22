@@ -9,21 +9,47 @@
    WebSite?: string
    Title?: string
 }
+
 export interface Story
 {
    Title?: string
    Items?: string[]
    MultiStory?: boolean
 }
+
 export interface Styles
 {
    Id: string
    Image: boolean
 }
 
+export interface LinkedIn
+{
+   Header: string
+   Summary: string
+   Story: string[]
+}
+
+export interface Token
+{
+   Text: string
+   Type?: string
+}
+
+export interface History
+{
+   Period?: string
+   Company?: string
+   Details?: string[]
+   LinkedIn?: LinkedIn
+   Projects?: Project[]
+   Sections?: Token[][]
+   
+}
+
 export interface Resume
 {
-   Id?: string|string[]
+   Id?: string | string[]
    Styles?: Styles
    Personal?: Personal
    Education?: Education[]
@@ -35,8 +61,8 @@ export interface Resume
    Statuses?: Status[]
    Experiences?: Experiences
    VisibleProjects?: Project[]
+   History?: History[]
 }
-
 
 export interface Project
 {
@@ -51,6 +77,7 @@ export interface Project
    Challenges?: string[]
    Domains?: string[]
    Modules?: string[]
+   
 }
 
 export interface Label
@@ -92,5 +119,5 @@ export interface StatusRole
 {
    Summary: string
    Details: string[]
-   JustSummary: boolean 
+   JustSummary: boolean
 }

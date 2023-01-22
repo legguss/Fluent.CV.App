@@ -1,20 +1,37 @@
 ﻿$mainBackground: #fff
 $mainColor: #625a3e
 $editorBorder: #ffd800
-$bulletColor:  #ffe555
+$bulletColor: #ffe555
 $experienceHeader: #81a42a
 $NarrowFont: 'Roboto Condensed', sans-serif
 $NormalFont: Roboto, sans-serif
 $RightTitleFontSize: 1.4em
 $LeftTitleFontSize: 1.4em
-
+$resumeLeftBackground: #f8f3d7
+$skillLabelBackground: #e4e1aa
+$Attila1: #d8ebff
+$Attila2: #89c4ff
+$Attila3: #0080ff
+$Attila4: #004589
+$Attila5: #121212
+$Azure1: #ffdb99
+$Azure2: #ffa500
+$Azure3: #c6e2ff
+$Azure4: #3399ff
+$Azure5: #002d7f
+$WinBlue: #00A4EF
+$WinGray: #737373
+$LightGray: #c9eef6
+$AttilaBulletColor: $Azure4
+$AttilaMainColor: $Attila5
+$TitleColor: #1480aa
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;500;700&display=swap")
 i
   padding-bottom: 0
 
-* 
+*
   box-sizing: border-box
-  
+//https://vecta.io/app/link?stencil=stencil_28&symbol=n0M-GJfxS4o0nj2oiWh-EH&name=Automation&utm_source=SymbolsPage
 html
   padding: 0
   margin: 0
@@ -32,8 +49,7 @@ html
 body
   font-weight: 400
   font-family: $NormalFont
-  
-    
+
 .of-row
   display: flex
   flex-direction: row
@@ -50,7 +66,7 @@ body
   display: block
   position: relative
 
-.o-resume *
+.o-resume
   background-color: transparent
   color: $mainColor
 
@@ -61,7 +77,6 @@ body
 .o-resume .o-title
   margin-top: 4px
   margin-bottom: 4px
-
   font-weight: bold
   color: #ff851e
   text-transform: uppercase
@@ -149,11 +164,10 @@ body
   flex-grow: 1
   flex-shrink: 1
   flex-basis: 33%
-  background-color: #f8f3d7
+  background-color: $resumeLeftBackground
   padding-left: 8px
   padding-top: 8px
   padding-right: 8px
-  
 
 .o-resume-right
   display: flex
@@ -167,7 +181,7 @@ body
 
 .o-resume-name
   font-size: 230%
-  font-family: "Roboto", sans-serif
+  font-family: $NormalFont
   font-weight: bold
   align-self: center
 
@@ -209,12 +223,8 @@ body
   padding-top: 10px
 
 .o-profile-info
-  font-size: 1em 
-  
+  font-size: 1em
 
-  
-
-  
 .o-education
   display: flex
   flex-flow: column
@@ -243,15 +253,13 @@ body
 
 .o-education-info:last-child
   padding-bottom: 0
-  
-  
+
 .o-education-school
   font-family: $NarrowFont
 
 .o-certificate-degree
   font-family: $NarrowFont
-  
-  
+
 .o-project-body
   margin-left: 10px
   display: flex
@@ -268,7 +276,6 @@ body
   max-width: 45%
   flex-grow: 45
   flex-shrink: 45
-
 
 .o-experience
   margin-right: 0
@@ -291,13 +298,12 @@ body
   color: $experienceHeader
 
 .o-experience-period
-  
-    
+  color: $TitleColor
+
 .o-experience-company
   padding-left: 6px
-  
-    
-  
+  color: #132a34
+
 .o-experience-body
   display: flex
   flex-flow: column
@@ -307,24 +313,23 @@ body
 .o-experience-line
   display: flex
   flex-flow: column
-  
+
 .o-experience-role
   display: flex
   align-items: start
   padding-bottom: 2px
+
   i
     display: flex
     padding-top: 4px
     padding-right: 4px
-    
+
 .o-resume-page
   //min-height: 290mm
   //height: 290mm
   position: relative
 
 .o-project-history
-  background-color: #fff
-  //margin-left: -230px
   padding-left: 20px
   padding-top: 5px
 
@@ -334,14 +339,14 @@ body
   font-size: 150%
   color: #625a3e
   text-transform: uppercase
+
 .o-bullet
   padding-top: 2px
   padding-right: 3px
-  color: #4f2626
+  color: $TitleColor
   font-size: 0.7rem
   display: flex
-  
-  
+
 .o-experience i, .o-story-line i
   color: $bulletColor
   font-size: 0.8rem
@@ -388,11 +393,8 @@ body
   flex-direction: row
   align-items: center
   justify-content: center
-  
-  
   text-align: center
-  //flex-wrap: wrap
-  background-color: #e4e1aa
+  background-color: $skillLabelBackground
   border-radius: 6px
 
 .o-skill-label.o-top-0
@@ -493,6 +495,59 @@ body
 .o-statuses .o-label
   padding-top: 2px
 
+.o-history
+  display: flex
+  flex-direction: column
+
+  .o-header
+    padding-top: 8px
+    display: flex
+    font-size: 1rem
+    font-weight: bold
+
+    .o-period
+      padding-right: 0.5rem
+      color: $TitleColor
+
+  .o-story
+    display: flex
+    line-height: 1rem
+    text-align: justify
+    justify-content: space-between 
+    align-items: center
+    align-content: center
+    flex-flow: wrap
+    font-family: $NarrowFont
+
+    .o-token-wrapper
+      display: inline-flex
+      align-items: center
+      
+    .o-bullet
+      display: inline-flex
+      padding: 0 0 0 0
+      font-size: 1rem
+      align-items: center
+      color: $TitleColor
+
+    .o-token
+      //margin-left: 0.5rem
+      display: inline-flex
+      margin-top: 3px
+      align-items: center
+
+    .highlight
+      color: $TitleColor
+      font-weight: bold
+
+    .skill
+      background: transparentize(yellow, 0.80)
+      border-radius: 2px
+      font-family: $NormalFont
+      font-weight: 500
+      color: $WinGray
+      padding: 0 0.5rem 0 0.5rem
+
 .hilda
   .o-resume-image
     display: none
@@ -501,14 +556,32 @@ body
     font-size: 90%
     font-weight: bold
 
+.attila
+  color: $AttilaMainColor
+
+  .o-experience i, .o-story-line i
+    color: $AttilaBulletColor
+    font-size: 100%
+
+  .o-resume-left
+    background-color: $LightGray
+  //$Attila1
+
+  .o-skill-label
+    background-color: #90E0EF
+    color: #000
+
+  .o-profile-title, .o-experience-title
+    color: #0096C7
+//$WinBlue
+
 @media print
   body
     margin-top: 4mm
     margin-left: 5mm
     margin-right: 5mm
   .o-resume-left
-     min-height: 288mm
-    
+    min-height: 288mm
   .o-page-break
     page-break-after: auto
     break-after: auto

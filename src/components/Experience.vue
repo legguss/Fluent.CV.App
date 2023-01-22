@@ -11,7 +11,7 @@
         </div>
         <div class="o-experience-roles">
           <div class="o-experience-role" v-for="detail in experience.Details">
-            <span class="o-bullet">◯</span>{{detail}}
+            <span class="o-bullet">●</span>{{detail}}
           </div>
         </div>
       </div>

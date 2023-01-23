@@ -14,6 +14,7 @@ export interface Story
 {
    Title?: string
    Items?: string[]
+   TokenizedItems?: Token[][]
    MultiStory?: boolean
 }
 
@@ -36,10 +37,11 @@ export interface Token
    Type?: string
 }
 
-export interface History
+export interface HistoryItem
 {
    Period?: string
    Company?: string
+   Role?: string
    Details?: string[]
    LinkedIn?: LinkedIn
    Projects?: Project[]
@@ -54,14 +56,17 @@ export interface Resume
    Personal?: Personal
    Education?: Education[]
    Certificates?: Education[]
-   Roles?: Label[]
-   Skills?: Label[]
-   Tools?: Label[]
+   Roles?: Skill[]
+   Skills?: Skill[]
+   Tools?: Skill[]
+   Foundations?: Skill[]
+   Products?: Skill[]
+   Domains?: Skill[]
    Story?: Story
    Statuses?: Status[]
    Experiences?: Experiences
    VisibleProjects?: Project[]
-   History?: History[]
+   History?: HistoryItem[]
 }
 
 export interface Project
@@ -80,10 +85,9 @@ export interface Project
    
 }
 
-export interface Label
+export interface Skill
 {
    Name: string
-   Count: number
    Top?: number
 }
 
@@ -106,7 +110,9 @@ export interface Experience
 {
    Period: string
    Details: string[]
+   TokenizedDetails: Token[][]
    Company: string
+   Role: string
 }
 
 export interface Status

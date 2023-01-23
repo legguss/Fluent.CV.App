@@ -5,7 +5,7 @@ $bulletColor: #ffe555
 $experienceHeader: #81a42a
 $NarrowFont: 'Roboto Condensed', sans-serif
 $NormalFont: Roboto, sans-serif
-$RightTitleFontSize: 1.4em
+$RightTitleFontSize: 1.2em
 $LeftTitleFontSize: 1.4em
 $resumeLeftBackground: #f8f3d7
 $skillLabelBackground: #e4e1aa
@@ -49,6 +49,57 @@ html
 body
   font-weight: 400
   font-family: $NormalFont
+
+.o-sentence
+  display: flex
+  line-height: 1rem
+  //text-align: justify
+  //justify-content: space-between
+  //align-items: center
+  //align-content: center
+  flex-flow: wrap
+  font-family: $NarrowFont
+
+  &:last-child
+    padding-bottom: 0
+
+.o-bullet
+  display: inline-flex
+  margin-left: 2px
+  color: $TitleColor
+
+.o-token-wrapper
+  display: inline-flex
+  margin-bottom: 3px
+
+.o-token
+  display: inline-flex
+  align-items: center
+
+.Verbs
+  color: $TitleColor
+  font-weight: bold
+
+.Products
+  font-weight: bold
+  color: #263bc0
+
+.Companies
+  font-weight: bold
+
+.Domains
+  font-weight: bold
+  color: #a0206e
+
+.Number
+  color: #4f4f4f
+  font-weight: bold
+  font-family: $NormalFont
+
+.Skills
+  font-family: $NormalFont
+  font-weight: bold
+  color: #e6354a !important
 
 .of-row
   display: flex
@@ -225,6 +276,10 @@ body
 .o-profile-info
   font-size: 1em
 
+  .o-sentence
+    display: flex
+    font-family: $NormalFont
+
 .o-education
   display: flex
   flex-flow: column
@@ -284,9 +339,9 @@ body
   padding-top: 8px
   padding-bottom: 0
   font-weight: bold
-  text-transform: uppercase
+  // text-transform: uppercase
   font-size: $RightTitleFontSize
-  color: #625a3e
+  color: $TitleColor
 
 .o-experience-header
   display: flex
@@ -305,32 +360,7 @@ body
   color: #132a34
 
 .o-experience-role
-  display: flex
-  flex-direction: row
-  line-height: 1rem
-  text-align: justify
-  //justify-content: space-between
-  //align-items: center
-  //align-content: center
-  font-family: $NarrowFont
-  //padding-bottom: 2px
-  .o-wrapper
-    display: inline-flex
-    align-items: center
-
-  .o-bullet
-    display: inline !important
-    padding: 0
-    font-size: 1rem
-    align-items: center
-    color: $TitleColor
-
-  .o-detail
-    display: inline !important
-    white-space: normal
-
-.o-experience-role:last-child
-  padding-bottom: 0
+  color: $WinGray
 
 .o-experience-body
   display: flex
@@ -352,11 +382,11 @@ body
   padding-top: 5px
 
 .o-project-history-title
-  padding-top: 12px
+  padding-top: 10px
   padding-bottom: 5px
-  font-size: 150%
-  color: #625a3e
-  text-transform: uppercase
+  font-size: $RightTitleFontSize
+  color: $TitleColor
+  font-weight: bold
 
 .o-experience i, .o-story-line i
   color: $bulletColor
@@ -501,7 +531,8 @@ body
   flex-direction: column
 
   .o-header
-    padding-top: 8px
+    padding-top: 10px
+    padding-bottom: 8px
     display: flex
     font-size: 1rem
     font-weight: bold
@@ -510,47 +541,8 @@ body
       padding-right: 0.5rem
       color: $TitleColor
 
-  .o-story
-    display: flex
-    line-height: 1rem
-    text-align: justify
-    //justify-content: space-between
-    align-items: center
-    align-content: center
-    flex-flow: wrap
-    font-family: $NarrowFont
-
-    .o-token-wrapper
-      display: inline-flex
-      align-items: center
-
-    .o-bullet
-      display: inline-flex
-      padding: 0 0 0 0
-      font-size: 1rem
-      align-items: center
-      color: $TitleColor
-
-    .o-token
-      //margin-left: 0.5rem
-      display: inline-flex
-      margin-top: 3px
-      align-items: center
-
-    .verb
-      color: $TitleColor
-      font-weight: bold
-
-    .noun
-      font-weight: bold
-
-    .skill
-      background: transparentize(yellow, 0.80)
-      border-radius: 2px
-      font-family: $NormalFont
-      font-weight: 500
+    .o-role
       color: $WinGray
-      padding: 0 0.5rem 0 0.5rem
 
 .hilda
   .o-resume-image
@@ -585,15 +577,12 @@ body
     margin-left: 5mm
     margin-right: 5mm
   .o-resume-left
-    min-height: 288mm
+    min-height: 280mm
   .o-page-break
     page-break-after: auto
     break-after: auto
     page-break-before: auto
     float: none
-
-    .o-menu
-      display: none
 
     body
       background-color: white !important

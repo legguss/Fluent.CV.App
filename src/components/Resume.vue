@@ -4,7 +4,7 @@ import {useRoute, useRouter} from 'vue-router'
 import Certificates from './Certificates.vue'
 import EducationSection from './EducationSection.vue'
 import Experience from './Experience.vue'
-import History from './History.vue'
+import HistoryList from './HistoryList.vue'
 import PersonalInfo from './PersonalInfo.vue'
 import Projects from './Projects.vue'
 import Skills from './Skills.vue'
@@ -44,11 +44,12 @@ onBeforeMount(async () =>
 
           <PersonalInfo :personal='cv.Personal'></PersonalInfo>
 
-          <Skills :roles='cv.Roles' header='ROLES'></Skills>
-
-          <Skills :roles='cv.Skills' header='skills'></Skills>
-
-          <Skills :roles='cv.Tools' header='tools'></Skills>
+          <Skills :skills='cv.Roles' header='roles'></Skills>
+          <Skills :skills='cv.Skills' header='skills'></Skills>
+          <Skills :skills='cv.Foundations' header='foundations'></Skills>
+          <Skills :skills='cv.Tools' header='tools'></Skills>
+          <Skills :skills='cv.Products' header='products'></Skills>          
+          <Skills :skills='cv.Domains' header='domains'></Skills>
 
           <EducationSection :educations='cv.Education'></EducationSection>
           <Certificates :certificates='cv.Certificates'></Certificates>
@@ -65,7 +66,7 @@ onBeforeMount(async () =>
       <Projects :projects='cv.VisibleProjects'></Projects>
     </div>
     <div class='o-resume-page o-resume-content' v-if='cv.History'>
-      <History :history='cv.History'></History>
+      <HistoryList :histories='cv.History'></HistoryList>
     </div>
   </div>
 </template>

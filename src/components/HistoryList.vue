@@ -3,8 +3,8 @@
     <div class='o-project-history-title'>
       Detailed Work History
     </div>
-    <template v-for='historySection in history'>
-      <HistorySection :history='historySection'>
+    <template v-for='history in histories'>
+      <HistorySection :history='history'>
 
       </HistorySection>
     </template>
@@ -14,9 +14,10 @@
 
 <script setup lang='ts'>
 
+import {HistoryItem} from '../models/Resume'
 import HistorySection from './HistorySection.vue'
 
-defineProps<{ history?: History[] }>()
+defineProps<{ histories: HistoryItem[] }>()
 
 </script>
 

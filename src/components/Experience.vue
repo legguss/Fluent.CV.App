@@ -8,12 +8,14 @@
         <div class='o-experience-header'>
           <div class='o-experience-period'>{{ experience.Period }}</div>
           <div class='o-experience-company'>@ {{ experience.Company }}</div>
+          <div class='o-experience-role'>&nbsp;· {{ experience.Role }}</div>
         </div>
-        <div class='o-experience-role'>
-          <template v-for='detail in experience.Details'>
-            <span class='o-wrapper'>
-                <span class='o-bullet'>●</span>
-                <span class='o-detail'>{{ detail }}</span>  
+        <div class='o-sentence'>
+          <template v-for='detail in experience.TokenizedDetails'>
+            <span class='o-token-wrapper' v-for='(token, index) in detail'>
+                <span class='o-bullet' v-if='index===0'>●</span>
+                <span>&nbsp;</span>
+                <span class='o-detail'>{{ token.Text }}</span>  
             </span>
           </template>
         </div>

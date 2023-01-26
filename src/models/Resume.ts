@@ -103,6 +103,7 @@ export interface Education
 export interface Experiences
 {
    Title: string
+   TokenizedSummary: Token[][] 
    Items: Experience[]
 }
 

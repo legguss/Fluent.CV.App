@@ -43,7 +43,6 @@ html
     width: 210mm
     margin: 0
     padding: 5mm
-    border: 1px solid $mainColor
     font-size: 11pt
 
 body
@@ -53,10 +52,6 @@ body
 .o-sentence
   display: flex
   line-height: 1rem
-  //text-align: justify
-  //justify-content: space-between
-  //align-items: center
-  //align-content: center
   flex-flow: wrap
   font-family: $NarrowFont
 
@@ -89,7 +84,7 @@ body
 
 .Domains
   font-weight: bold
-  color: #a0206e
+  color: #404040
 
 .Number
   color: #4f4f4f
@@ -97,9 +92,14 @@ body
   font-family: $NormalFont
 
 .Skills
-  font-family: $NormalFont
+  background-color: #f9f6bd
+  padding-left: 6px
+  padding-right: 6px
+  border: 1px solid #e4e1aa
+  font-family: $NarrowFont
   font-weight: bold
-  color: #e6354a !important
+  border-radius: 4px
+  color: #5f5f5f
 
 .of-row
   display: flex
@@ -371,6 +371,8 @@ body
 .o-experience-line
   display: flex
   flex-flow: column
+  .o-sentence
+    font-family: $NormalFont
 
 .o-resume-page
   //min-height: 290mm
@@ -382,9 +384,11 @@ body
   padding-top: 5px
 
 .o-project-history-title
-  padding-top: 10px
+  padding-top: 40px
   padding-bottom: 5px
-  font-size: $RightTitleFontSize
+  display: flex
+  justify-content: center
+  font-size: 1.5rem
   color: $TitleColor
   font-weight: bold
 

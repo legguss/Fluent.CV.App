@@ -25,7 +25,6 @@
           {{ personal?.Skype }}
         </div>
       </div>
-
       <div class="o-personal-info-row" v-if="personal?.WebSite">
         <div class="o-personal-info-cell o-caption">
           Website:
@@ -42,7 +41,7 @@
 
 import {Personal} from '../models/Resume'
 
-const props = defineProps<{ personal: Personal }>()
+defineProps<{ personal: Personal }>()
 
 </script>
 

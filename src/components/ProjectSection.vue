@@ -1,6 +1,5 @@
 ﻿<template>
   <div class="of-column o-project-section">
-
     <div class="of-column o-resume-project">
       <div class="o-resume-project-header">
         <div class="o-title">
@@ -8,16 +7,13 @@
         </div>
         <div class="o-short-description">
           <span>{{ project.Summary }}</span>
-
         </div>
       </div>
-
       <div class="o-project-body">
         <div class="o-project-left">
           <div class="o-info o-statuses" v-if="project.Status">
             <div>status:</div>
             <div class="o-label" v-for="status in project.Status">{{ status }}</div>
-
             <div>type:</div>
             <div v-if="project.Type" class="o-status-labels">
               <div v-for="label in project.Type" class="o-label o-type">{{ label }}</div>
@@ -60,14 +56,6 @@
                 </div>
               </div>
             </div>
-            <!--div v-if="false" class="o-label-row  o-labels">
-              <div class="o-labels-caption"> keys:</div>
-              <div class="o-labels-list">
-                <div class="o-labels-container">
-                  <div v-for="label in project.keyWordLabels" class="o-label o-key">{{ label }}</div>
-                </div>
-              </div>
-            </div-->
             <div v-if="project.Tools" class="o-label-row o-labels"></div>
             <div class="o-labels-caption"> tools:</div>
             <div class="o-labels-list">

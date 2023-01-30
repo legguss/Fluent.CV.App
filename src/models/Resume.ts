@@ -105,7 +105,8 @@ export interface Education
 export interface Experiences
 {
    Title: string
-   TokenizedSummary: Token[][] 
+   Packed: boolean
+   TokenizedSummary: Token[][]
    Items: Experience[]
 }
 

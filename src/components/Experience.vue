@@ -19,15 +19,25 @@
           <div class='o-experience-company' v-if='experience.Company'>@ {{ experience.Company }}</div>
           <div class='o-experience-role' v-if='experience.Role'>&nbsp;· {{ experience.Role }}</div>
         </div>
-        <div class='o-sentence'>
+        <div class='o-sentence' v-if='experiences.Packed'>
           <template v-for='detail in experience.TokenizedDetails'>
             <span class='o-token-wrapper' v-for='(token, index) in detail'>
                 <span class='o-bullet' v-if='index===0'>●</span>
                 <span>&nbsp;</span>
-                <span class='o-token' :class='token.Type'>{{ token.Text }}</span> 
+                <span class='o-token' :class='token.Type'>{{ token.Text }}</span>
             </span>
           </template>
         </div>
+        <template v-for='detail in experience.TokenizedDetails' v-if='!experiences.Packed'>
+          <div class='o-sentence'>
+            <span class='o-token-wrapper' v-for='(token, index) in detail'>
+                <span class='o-bullet' v-if='index===0'>●</span>
+                <span>&nbsp;</span>
+                <span class='o-token' :class='token.Type'>{{ token.Text }}</span>
+            </span>
+          </div>
+        </template>
+
       </div>
     </div>
   </div>

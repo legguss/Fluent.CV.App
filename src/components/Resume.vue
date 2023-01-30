@@ -50,6 +50,7 @@ onBeforeMount(async () =>
           <Skills :skills='cv.Products' header='products'></Skills>
           <Skills :skills='cv.Domains' header='domains'></Skills>
           <Skills :skills='cv.Languages' header='languages'></Skills>
+          <Skills :skills='cv.Hobbies' header='hobbies'></Skills>
 
           <EducationSection :educations='cv.Education'></EducationSection>
           <Certificates :certificates='cv.Certificates'></Certificates>

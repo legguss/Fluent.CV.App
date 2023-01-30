@@ -62,6 +62,7 @@ export interface Resume
    Foundations?: Skill[]
    Products?: Skill[]
    Domains?: Skill[]
+   Languages?: Skill[]
    Story?: Story
    Statuses?: Status[]
    Experiences?: Experiences

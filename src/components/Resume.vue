@@ -18,7 +18,6 @@ const route = useRoute()
 
 onBeforeMount(async () =>
 {
-
   const response = await fetch(`api/cv/${route.params.id}`)
   cv.value = await response.json()
   cv.value.Id = route.params.id
@@ -48,8 +47,9 @@ onBeforeMount(async () =>
           <Skills :skills='cv.Skills' header='skills'></Skills>
           <Skills :skills='cv.Foundations' header='foundations'></Skills>
           <Skills :skills='cv.Tools' header='tools'></Skills>
-          <Skills :skills='cv.Products' header='products'></Skills>          
+          <Skills :skills='cv.Products' header='products'></Skills>
           <Skills :skills='cv.Domains' header='domains'></Skills>
+          <Skills :skills='cv.Languages' header='languages'></Skills>
 
           <EducationSection :educations='cv.Education'></EducationSection>
           <Certificates :certificates='cv.Certificates'></Certificates>
